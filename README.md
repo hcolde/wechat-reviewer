@@ -1,6 +1,6 @@
 # wechat-reviewer
 
-
+此项目基于[padlocal](https://github.com/padlocal/wechaty-puppet-padlocal)开发
 
 ## 使用
 
