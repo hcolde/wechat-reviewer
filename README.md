@@ -43,7 +43,8 @@
     registry.cn-shenzhen.aliyuncs.com/colde/wechat-reviewer:1.0
     ```
 
-  * 若不填写邮箱信息，登录二维码发送到邮箱功能不生效，不影响程序正常运行，二维码可通过访问https://api.qrserver.com/v1/create-qr-code/?data=xxxx查看，具体URL可通过日志查看:`sudo docker logs robot`
+    若不填写邮箱信息，登录二维码发送到邮箱功能不生效，不影响程序正常运行，二维码可通过访问 https://api.qrserver.com/v1/create-qr-code/?data=xxxx查看，具体URL可通过日志查看: `sudo docker logs robot`
+    
 
 ## 介绍
 
