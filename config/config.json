@@ -1,8 +1,8 @@
 {
     "pad_local": {
         "name": "reviewer",
-        "token": "ur token",
-        "owner_pass": "call me dad",
+        "token": "TOKEN",
+        "owner_pass": "OWNERPASS",
         "help": [
             "关闭检测功能",
             "开启文本审核功能",
@@ -10,13 +10,13 @@
         ]
     },
     "mail": {
-        "host": "smtp.qq.com",
-        "port": 25,
+        "host": "MAILHOST",
+        "port": MAILPORT,
         "auth": {
-            "user": "123456@qq.com",
-            "pass": "授权码"
+            "user": "MAILUSER",
+            "pass": "MAILPASS"
         },
-        "receiver": ["123456@qq.com"]
+        "receiver": ["MAILUSER"]
     },
     "redis": {
         "host": "127.0.0.1",

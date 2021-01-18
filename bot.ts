@@ -108,7 +108,7 @@ bot
                     add(res[0]);
                     msg = `已将【${res[0]}】标记为敏感词`;
                 }
-            } else if (text[0] == "DS") { // 删除敏感词汇
+            } else if (text[0] == "D" && text[1] == "S") { // 删除敏感词汇
                 let word = text.substr(2, text.length - 2);
                 msg = del(word);
             }
