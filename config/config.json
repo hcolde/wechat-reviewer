@@ -1,0 +1,33 @@
+{
+    "pad_local": {
+        "name": "reviewer",
+        "token": "ur token",
+        "owner_pass": "call me dad",
+        "help": [
+            "关闭检测功能",
+            "开启文本审核功能",
+            "开启文本审核并强制踢出群聊"
+        ]
+    },
+    "mail": {
+        "host": "smtp.qq.com",
+        "port": 25,
+        "auth": {
+            "user": "123456@qq.com",
+            "pass": "授权码"
+        },
+        "receiver": ["123456@qq.com"]
+    },
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379,
+        "expire": 300,
+        "key": {
+            "owner": "owner",
+            "status": "status",
+            "sensitive": "sensitive_word_",
+            "detect": "detect",
+            "detect_result": "detect_result"
+        }
+    }
+}
