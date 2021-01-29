@@ -5,10 +5,17 @@ export class Redis {
     redis: Tedis;
 
     constructor() {
-        this.redis = new Tedis({
-            host: config.redis.host,
-            port: config.redis.port,
-        })
+        if (config.redis.password == "")
+            this.redis = new Tedis({
+                host: config.redis.host,
+                port: config.redis.port,
+            })
+        else
+            this.redis = new Tedis({
+                host: config.redis.host,
+                port: config.redis.port,
+                password: config.redis.password
+            })
     }
 
     hmset(key:string, hash:{}, expire:number = 0) {
@@ -21,15 +28,12 @@ export class Redis {
     }
 
     set(key:string, value:string, expire:number = 0) {
-        this.redis.set(key, value);
+        this.redis.set(key, value)
         if (expire > 0) this.redis.expire(key, expire);
     }
 
-    async get(key:string) {
-        return await this.redis.get(key);
-    }
-
-    close() {
-        this.redis.close()
+    lpush(key:string, value:string, expire:number = 0) {
+        this.redis.lpush(key, value)
+        if (expire > 0) this.redis.expire(key, expire)
     }
 }
