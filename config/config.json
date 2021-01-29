@@ -1,33 +1,28 @@
 {
     "pad_local": {
         "name": "reviewer",
-        "token": "TOKEN",
-        "owner_pass": "OWNERPASS",
+        "token": "",
+        "owner_pass": "233",
         "help": [
             "关闭检测功能",
             "开启文本审核功能",
             "开启文本审核并强制踢出群聊"
         ]
     },
-    "mail": {
-        "host": "MAILHOST",
-        "port": MAILPORT,
-        "auth": {
-            "user": "MAILUSER",
-            "pass": "MAILPASS"
-        },
-        "receiver": ["MAILUSER"]
+    "log": {
+        "level": "debug",
+        "name": "log",
+        "path": "./log",
+        "size": 1048576,
+        "backups": 100
     },
     "redis": {
         "host": "127.0.0.1",
         "port": 6379,
-        "expire": 300,
+        "password": "",
+        "expire": 600,
         "key": {
-            "owner": "owner",
-            "status": "status",
-            "sensitive": "sensitive_word_",
-            "detect": "detect",
-            "detect_result": "detect_result"
+            "pay_list":"paylist"
         }
     }
 }
