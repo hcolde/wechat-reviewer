@@ -1,7 +1,7 @@
 import { Message } from "wechaty";
 import { getLogger } from "log4js";
 
-import { getTransID, getPay } from "./message/pay";
+import { personalMessage } from "./message/personal";
 
 const logger = getLogger();
 
@@ -20,22 +20,5 @@ export async function onMessage(message: Message) {
     }
 
     // 个人消息
-    let wx = message.from()?.weixin();
-
-    switch (message.type()) {
-        // 扫描收款码
-        case Message.Type.Recalled:
-            getTransID(message.text())
-            break;
-
-        case Message.Type.Url:
-            if (wx == "wxzhifu") {
-                // 完成收款
-                getPay(message.text())
-            }
-            break;
-
-        default:
-            break;
-    }
+    personalMessage(message);
 }

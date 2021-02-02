@@ -1,13 +1,8 @@
 {
     "pad_local": {
         "name": "reviewer",
-        "token": "",
-        "owner_pass": "233",
-        "help": [
-            "关闭检测功能",
-            "开启文本审核功能",
-            "开启文本审核并强制踢出群聊"
-        ]
+        "token": "xxx",
+        "owner_pass": "yyy"
     },
     "log": {
         "level": "debug",
@@ -22,7 +17,12 @@
         "password": "",
         "expire": 600,
         "key": {
-            "pay_list":"paylist"
+            "owner":     "owner",
+            "publisher": "publisher",
+            "pay_list":  "paylist",
+            "vip_list":  "viplist",
+            "member":    "member",
+            "vip":       "vip"
         }
     }
 }

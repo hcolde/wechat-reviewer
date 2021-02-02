@@ -69,6 +69,6 @@ export function getPay(text: string) {
     }
 
     let msg = `{"trans_id":"${transID}","money":${pay}}`;
-    logger.info(msg)
+    logger.info(msg);
     redis.lpush(config.redis.key.pay_list, msg);
 }

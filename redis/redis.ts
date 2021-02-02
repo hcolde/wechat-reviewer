@@ -28,12 +28,20 @@ export class Redis {
     }
 
     set(key:string, value:string, expire:number = 0) {
-        this.redis.set(key, value)
+        this.redis.set(key, value);
         if (expire > 0) this.redis.expire(key, expire);
     }
 
+    async get(key:string) {
+        return await this.redis.get(key);
+    }
+
     lpush(key:string, value:string, expire:number = 0) {
-        this.redis.lpush(key, value)
-        if (expire > 0) this.redis.expire(key, expire)
+        this.redis.lpush(key, value);
+        if (expire > 0) this.redis.expire(key, expire);
+    }
+
+    async brpop(key:string) {
+        return await this.redis.brpop(0, key);
     }
 }
